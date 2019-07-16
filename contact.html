@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Sai Sansthan, Wellington</title>
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="css/carousel.css" rel="stylesheet">
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	  <header>
+				<nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #290900;">
+					<a class="navbar-brand" href="./index.html">Om Sai Ram</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item ">
+								<a class="nav-link" href="./index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./about.html">About</a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link" href="./services.html">Events/Seva Opportunities<span class="sr-only">(current)</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="./contact.html">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="header-top">
+					<br>
+					<marquee behavior="scroll" direction="left" class="alert alert-warning">"ANANTKOTI BRAHMAND NAYAK RAJADHIRAJ YOGIRAJ PAR BRAHMA SHREE SACHHIDANAND SADGURU SAINATH MAHARAJ KI JAI"</marquee>
+				</div>
+		</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Contact Us</h3>
+					</div>
+				<div class="panel-body">
+					<p>Please fill out this form to contact us</p>
+					<div class="alert" id="msg"></div>
+					<form id="regForm">
+					  <div class="form-group">
+					    <label>Name</label>
+					    <input type="text" class="form-control" id="name">
+					  </div>
+					  <div class="form-group">
+					    <label>Email</label>
+					    <input type="email" class="form-control" id = "email">
+					  </div>
+					  <div class="form-group">
+					    <label>Message</label>
+					    <textarea class="form-control" id="message"></textarea>
+					  </div>
+
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+			</div>
+			</div>
+			</div>
+			<div class="col-md-4">
+				<div class="well">
+				<h3>For your kind attention</h3>
+				<p>	For any information regarding prasadam and sevas kindly get in touch with Laxmi @22002200<br>
+								You can also email us at hhh.ppp@gmail.com<br><br><br>
+								KINDLY NOTE WE DO NOT ACCEPT ANY DONATIONS IN ANY FORM.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+				<p>Copyright &copy; 2019</p>
+				</div>
+				<div class="col-md-3">
+					<ul class="list-unstyled">
+						<li><a href="#">About Us</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="list-unstyled">
+						<li><a href="#">Events</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="list-unstyled">
+						<li><a href="#">Contact Us</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		function register(e){
+			e.preventDefault();
+
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var message = document.getElementById('message').value;
+
+			var msg = document.getElementById('msg');
+
+			if(name == '' || email == '' || message == '' || name == null || email == null || message == null){
+				msg.className="alert alert-danger";
+				msg.innerHTML = 'Please fill out all fields';
+			} else {
+				if(name.length < 3){
+					msg.className="alert alert-danger";
+					msg.innerHTML = 'Name must be at least 3 characters';
+				} else {
+							msg.className="alert alert-success";
+							msg.innerHTML = 'We received your email, we will try to get back as soon as possible!!!';
+					}
+			}
+		}
+
+		document.getElementById('regForm').addEventListener('submit', register, false);
+	</script>
+
+	<script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
